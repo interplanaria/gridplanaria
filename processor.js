@@ -28,7 +28,7 @@ class Processor {
   }
   listen () {
     if (!this.m) {
-      let o = Object.assign({chain: this.gene.chain}, this.gene.filter.host)
+      let o = Object.assign({chain: this.gene.chain}, this.gene.filter.host, this.gene.filter.peer)
       this.m = new bitwork(o)
       if(this.gene.filter && this.gene.filter.l && this.gene.filter.l.map) this.m.use("map", this.gene.filter.l.map)
       if(this.gene.filter && this.gene.filter.l && this.gene.filter.l.filter) this.m.use("filter", this.gene.filter.l.filter)
@@ -43,7 +43,7 @@ class Processor {
       })
     }
     if (!this.b) {
-      let o = Object.assign({chain: this.gene.chain}, this.gene.filter.host)
+      let o = Object.assign({chain: this.gene.chain}, this.gene.filter.host, this.gene.filter.peer)
       this.b = new bitwork(o)
       if(this.gene.filter && this.gene.filter.l && this.gene.filter.l.map) this.b.use("map", this.gene.filter.l.map)
       if(this.gene.filter && this.gene.filter.l && this.gene.filter.l.filter) this.b.use("filter", this.gene.filter.l.filter)
