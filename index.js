@@ -11,7 +11,7 @@ class Planaria {
     this.tapePath = gene.tape + "/tape.txt"
     let chain = gene.chain || {}
     this.gene.chain = chain;
-    let o = Object.assign({chain: chain}, gene.filter.host, gene.filter.peer)
+    let o = Object.assign({chain: chain}, gene.filter.host)
     this.crawler = { block: new bitwork(o), mempool: new bitwork(o) };
     ["block", "mempool"].forEach((type) => {
       this.crawler[type].use("parse", this.gene.defaultParser)

@@ -264,7 +264,10 @@ const planaria = new Planaria();
 planaria.start({
   filter: {
     from: 600340,
-    host: { rpc: { user: "root", pass: "bitcoin" } },
+    host: {
+      rpc: { user: "root", pass: "bitcoin", host: "127.0.0.1" },
+      peer: { host: "127.0.0.1" }
+    },
   },
   onmempool: async function(e) {
     console.log("onmempool = ", e.tx)

@@ -1,11 +1,11 @@
 {
   "name": "gridplanaria",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Distributed Bitcoin Data Grid",
   "main": "index.js",
   "author": "unwriter@protonmail.com",
   "license": "Open BSV",
   "dependencies": {
-    "bitwork": "0.0.25"
+    "bitwork": "0.0.26"
   }
 }
