@@ -177,6 +177,17 @@ Grid Planaria communicates directly with Bitcoin full nodes, therefore you need 
 
 ---
 
+# Examples
+
+Here are some example code that works out of the box:
+
+1. [Raw](demo/raw.js): Process all transactions
+2. [Filtered](demo/filtered.js): Process only the transactions that match a certain pattern
+3. [Remote](demo/remote.js): Connect to a remote node
+4. [TXO](demo/txo.js): Grid planaria also supports TXO serialization format which can be adopted by simply attaching the "txo" engine.
+
+---
+
 **First,** download the Bitcoin SV node:
 
 <a href='https://github.com/bitcoin-sv/bitcoin-sv/releases' class='btn'>Visit Bitcoin SV Node Download Page ></a>

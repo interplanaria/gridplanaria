@@ -11,7 +11,8 @@ const planaria = new Planaria();
 planaria.start({
   filter: {
     from: 611400,
-    // Switch the "host" attribute to your own host IP
+    // The "host" attribute is a dummy value.
+    // Switch it to YOUR OWN host IP
     host: { rpc: { user: "root", pass: "bitcoin", host: "166.98.14.89" } },
   },
   onmempool: async function(e) {
