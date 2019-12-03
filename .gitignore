@@ -1,2 +1,4 @@
 node_modules
 tape.txt
+**/tape.txt
+**/chain

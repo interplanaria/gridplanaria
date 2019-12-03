@@ -12,8 +12,8 @@ class Planaria {
     let chain = gene.chain || {}
     this.gene.chain = chain;
     let o = Object.assign({chain: chain}, gene.filter.host)
-    this.crawler = { block: new bitwork(o), mempool: new bitwork(o) };
-    ["block", "mempool"].forEach((type) => {
+    this.crawler = { fetcher: new bitwork(o), listener: new bitwork(o) };
+    ["fetcher", "listener"].forEach((type) => {
       this.crawler[type].use("parse", this.gene.defaultParser)
       if(this.gene.filter && this.gene.filter.l && this.gene.filter.l.map) this.crawler[type].use("map", this.gene.filter.l.map)
       if(this.gene.filter && this.gene.filter.l && this.gene.filter.l.filter) this.crawler[type].use("filter", this.gene.filter.l.filter)
@@ -21,10 +21,10 @@ class Planaria {
       this.ps = new processor({ gene: this.gene, crawler: this.crawler, cmd: this.cmd })
     });
     Promise.all([
-      this.wait("block"),
-      this.wait("mempool")
+      this.wait("fetcher"),
+      this.wait("listener")
     ]).then(async () => {
-      let info = await this.crawler.block.get("info")
+      let info = await this.crawler.fetcher.get("info")
       let current = await tape.current({ start: 1, end: info.blocks }, this.gene)
       await this.cmd.START(current);
       await this.ps.next()
