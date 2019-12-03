@@ -181,10 +181,10 @@ Grid Planaria communicates directly with Bitcoin full nodes, therefore you need 
 
 Here are some example code that works out of the box:
 
-1. [Raw](demo/raw.js): Process all transactions
-2. [Filtered](demo/filtered.js): Process only the transactions that match a certain pattern
-3. [Remote](demo/remote.js): Connect to a remote node
-4. [TXO](demo/txo.js): Grid planaria also supports TXO serialization format which can be adopted by simply attaching the "txo" engine.
+1. [Raw](https://github.com/interplanaria/gridplanaria/blob/master/demo/raw.js): Process all transactions
+2. [Filtered](https://github.com/interplanaria/gridplanaria/blob/master/demo/filtered.js): Process only the transactions that match a certain pattern
+3. [Remote](https://github.com/interplanaria/gridplanaria/blob/master/demo/remote.js): Connect to a remote node
+4. [TXO](https://github.com/interplanaria/gridplanaria/blob/master/demo/txo.js): Grid planaria also supports TXO serialization format which can be adopted by simply attaching the "txo" engine.
 
 ---
 
